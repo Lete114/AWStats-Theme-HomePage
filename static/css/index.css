@@ -1,0 +1,205 @@
+html{
+    font-family: "PingFang SC","Microsoft YaHei",Helvetica,Arial,Menlo,Monaco,monospace,sans-serif;
+}
+
+  body {
+    margin: 0;
+    font-size: 11pt;
+    font-weight: normal;
+    line-height: 2em;
+    background-color: #fff;
+    color: #161209;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a:hover {
+    color: var(--a_hover);
+    text-decoration: none;
+  }
+  /*主体*/
+  .wrapper {
+    z-index: -999;
+    width: 100%;
+    height: 100%;
+    background: var(--bg_img);
+    background-attachment: local;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /*设置整体宽高*/
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+  }
+  /*禁止logo换行*/
+  .header-logo {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    float: left;
+  }
+  /*导航栏*/
+  .navbar {
+    height: 4rem;
+    line-height: 4rem;
+    width: 100%;
+  }
+  .navbar .container {
+    width: auto;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar .menu a {
+    padding: 0 8px;
+  }
+  /*控制显示长度*/
+  .menu-item {
+    max-width: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    float: left;
+  }
+  /*手机导航栏*/
+  .container {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  /*大屏幕显示nav在同一行*/
+  .navlist {
+    float: left;
+  }
+  @media screen and (max-width: 800px) {
+    .menu-toggle {
+      display: block !important;
+    }
+    .menu {
+      display: none;
+    }
+    .mobile-nav {
+      position: relative;
+      box-sizing: border-box;
+      top: 50px;
+      left: 60px;
+      width: 90px;
+      float: left;
+      background: #fff;
+      z-index: 99999;
+      border-radius: 5px;
+    }
+    #navlist a {
+      color: #000;
+    }
+  }
+  /*中间*/
+  .main {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+  /*头像*/
+  .intro {
+    transform: translateY(20vh);
+    text-align: center;
+  }
+  .intro .avatar {
+    padding: 10px;
+  }
+  .intro .avatar img {
+    width: 128px;
+    height: auto;
+    display: inline-block;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-box-shadow: 0 0 0 0.3618em rgba(0,0,0,0.05);
+    box-shadow: 0 0 0 0.3618em rgba(0,0,0,0.05);
+    margin: 0 auto;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  .intro .avatar :hover {
+    position: relative;
+    -webkit-transform: rotate(540deg);
+    -moz-transform: rotate(540deg);
+    -o-transform: rotate(540deg);
+    -ms-transform: rotate(540deg);
+    transform: rotate(540deg);
+    cursor: pointer;
+  }
+  /*名称*/
+  .name {
+    color: var(--author_color);
+    font-size: 2em;
+    font-weight: normal;
+  }
+  .description {
+    color: var(--desc_color);
+  }
+  /*icon图标*/
+  .links a {
+    padding: 0 5px;
+  }
+  .links:hover {
+    background-color: transparent;
+  }
+  .links .link-item i {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: var(--font_size);
+  }
+  .links .link-item i:hover {
+    -webkit-transform: rotate(540deg);
+    -moz-transform: rotate(540deg);
+    -o-transform: rotate(540deg);
+    -ms-transform: rotate(540deg);
+    transform: rotate(540deg);
+  }
+  /*页脚*/
+  .footer {
+  /*height 4rem*/
+    width: 100%;
+    text-align: center;
+    line-height: 4rem;
+    padding-top: 2em;
+  }
+  .footer a:hover {
+    color: var(--a_hover);
+  }
+  .copyright {
+    font-size: 14px;
+  }
+  /*ICP备案*/
+  #icp {
+    position: relative;
+    top: 30px;
+  }
+  #icp img {
+    padding: 0 4px;
+    vertical-align: text-bottom;
+  }
+  .copyright span {
+    color: var(--footer_color);
+  }
+  .copyright a {
+    color: var(--footer_a_color);
+  }

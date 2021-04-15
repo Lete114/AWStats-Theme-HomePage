@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="<%= themes.language %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="<%= themes.author %>">
+    <meta name="description" content="<%= themes.description %>">
+    <meta name="keywords" content="<%-themes.keywords%>">
+    <title><%= themes.name %> | <%= themes.description %></title>
+    <link rel="icon" href="<%= themes.favicon %>">
+    <link rel="stylesheet" href="<%-themes.CDN.index%>">
+    <link rel="stylesheet" href="<%-themes.CDN.iconfont%>">
+    <style>
+        :root{
+            --font_size: <%-themes.font_size%>;
+            --a_hover: <%-themes.a_hover%>;
+            --author_color: <%-themes.author_color%>;
+            --desc_color: <%-themes.desc_color%>;
+            --footer_color: <%-themes.footer_color%>;
+            --footer_a_color: <%-themes.footer_a_color%>;
+            --bg_img: <%-themes.bg_img%>;
+        }
+    </style>
+    <%if(themes.analytics.baidu!=null){%>
+        <!-- 百度统计 -->
+        <script>
+            var _hmt = _hmt || [];
+            (function () {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?<%-themes.analytics.baidu%>";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+        <%}%>
+        <%if(themes.analytics.google!=null){%>
+        <!-- 谷歌统计 -->
+        <script>
+            const script = document.createElement('script')
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=<%-themes.analytics.google%>'
+            script.async = true
+            document.head.appendChild(script)
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', '<%-themes.analytics.google%>');
+        </script>
+    <%}%>
+    <% themes.import.head.forEach(function(head, i){ %> 
+        <%-head%>
+    <% }) %>
+</head>
+<body>
+    <% themes.import.top.forEach(function(top, i){ %> 
+        <%-top%>
+    <% }) %>
+<div class="wrapper">
+    <div class="main">
+        <div class="container">
+            <div class="intro">
+                <div class="avatar">
+                    <a href="/"><img src="<%- themes.avatar%>" alt="<%= themes.author %>"></a>
+                </div>
+                <div class="name"><%= themes.author %></div>
+                <div class="description">
+                        <p><%- themes.desc %></p>
+                </div>
+                <div class="links">
+                    <% for (var i in themes.links){ %>
+                    <a class="link-item" href="<%-themes.links[i] %>" target="_blank" rel="noopener">
+                        <i class="<%=i%>"></i>
+                    </a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            <%if(themes.ICP.enable == true){%>
+                <a id="icp" href="<%-themes.ICP.url%>" target="_blank" rel="noopener" one-link-mark="yes">
+                    <img style="padding: 0 4px;vertical-align: text-bottom;" src="<%-themes.ICP.icon%>" alt="ICP"/><%-themes.ICP.text%></a><br/>
+            <%}%>
+            <% var now=new Date().getFullYear(); %>
+            <span>Copyright © <span><%- themes.since===now ? since : (themes.since + " - " + now) %></span>
+                    <a href="/" one-link-mark="yes"><%= themes.author %>
+                    </a> All Rights Reserved.
+            </span>
+        </div>
+    </footer>
+</div>
+<script>
+    console.log('\n' + ' %c AWStats-HomePage %c https://github.com/lete114/HomePage ' + '\n', 'color: <%-themes.author_color %>; background: #333; padding:5px 0;', 'background: <%-themes.author_color %>; padding:5px 0;');
+</script>
+<% themes.import.bottom.forEach(function(bottom, i){ %>
+    <%-bottom%>
+<% }) %>
+</body>
+</html>
