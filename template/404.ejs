@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="<%-themes.language%>">
+<html lang="<%-theme.language%>">
 
 <head>
     <meta charset="UTF-8">
-    <title><%- themes.author %> | <%- themes.description %></title>
-    <link rel="icon" href="<%- themes.favicon %>">
+    <title><%- theme.author %> | <%- theme.description %></title>
+    <link rel="icon" href="<%- theme.favicon %>">
     <style>
         body {
-            background: <%-themes.error_404.background%>;
+            background: <%-theme.error_404.background%>;
         }
         #notFound {
             position: fixed;
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <script src='<%-themes.CDN.pixi%>'></script>
+    <script src='<%-theme.CDN.pixi%>'></script>
     <script id="rendered-js">
         (function () {
             var lastTime = 0;
