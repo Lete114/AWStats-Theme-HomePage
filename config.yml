@@ -1,14 +1,14 @@
 #--------------------------------------------------------
-# AWStats-Themes-HomePage
-# 项目地址：https://github.com/lete114/HomePage
-# 演示地址：https://www.lete114.top/
+# AWStats-Theme-HomePage
+# 项目地址：https://github.com/lete114/AWStats-Theme-HomePage
+# 演示地址：https://www.imlete.cn/
 # 一个静态个人主页
 #--------------------------------------------------------
 
 
 # language 语言
 language: zh-CN
-author: Lete乐特 # author 名称 
+author: Lete乐特 # author 名称
 avatar: /img/avatar.png # avatar 头像
 favicon: /img/favicon.ico # favicon 图标
 desc: 我相信我可以，但我一直在路上，所以我有无限的可能！！<br>人生只有一次，大胆的生活，怎么舒服怎么来！！ # 个人描述
@@ -41,10 +41,10 @@ author_color: '#80bdab'
 desc_color: '#000'
 
 # 自定义背景
-# bg_img: url(https://cdn.jsdelivr.net/gh/lete114/CDN2/img/wei_er_li_te/3.jpg)
+# bg_img: url(https://www.imlete.cn/img/bg.jpg)
 # bg_img: '#fff'
 # bg_img: 'white'
-bg_img: url(https://cdn.jsdelivr.net/gh/lete114/CDN2/img/wei_er_li_te/3.jpg)
+bg_img: url(https://www.imlete.cn/img/bg.jpg)
 
 
 
@@ -52,13 +52,13 @@ bg_img: url(https://cdn.jsdelivr.net/gh/lete114/CDN2/img/wei_er_li_te/3.jpg)
 # 自定义引入外部css、js
 import:
   head: # 引入到</head>之前
-    - 
+    -
   top: # 引入到<body>之后
     - <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
     - <style>.icon-icon_doc_fill{color:#e58a8a;}</style>
   bottom: # 引入到</body>之前
-    - 
-  # 例如： 
+    -
+  # 例如：
   # - <link rel="stylesheet" href="/css/index.css">
   # - '<style>body{color: red}</style>' ## 注意由于css的‘{}’是关键符号所以需要(单/双)引号''
   # - <script>alert(1)</script>
@@ -73,8 +73,8 @@ ICP:
   enable: false
   icon: img/icp.png
   url: http://www.beian.miit.gov.cn/
-  text: 
-  
+  text:
+
 # 分析(统计)
 analytics:
   baidu:  # 百度分析
