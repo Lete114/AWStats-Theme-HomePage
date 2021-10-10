@@ -84,7 +84,7 @@
                     <img style="padding: 0 4px;vertical-align: text-bottom;" src="<%-theme.ICP.icon%>" alt="ICP"/><%-theme.ICP.text%></a><br/>
             <%}%>
             <% var now=new Date().getFullYear(); %>
-            <span>Copyright © <span><%- theme.since===now ? since : (theme.since + " - " + now) %></span>
+            <span>Copyright © <span><%- theme.since===now ? theme.since : (theme.since + " - " + now) %></span>
                     <a href="/" one-link-mark="yes"><%= theme.author %>
                     </a> All Rights Reserved.
             </span>
