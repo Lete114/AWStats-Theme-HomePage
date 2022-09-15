@@ -1,6 +1,6 @@
 {
   "name": "awstats-theme-homepage",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A simple personal homepage",
   "keywords": [
     "awstats",
@@ -9,6 +9,5 @@
     "static"
   ],
   "author": "Lete乐特",
-  "license": "MIT",
-  "dependencies": {}
+  "license": "MIT"
 }

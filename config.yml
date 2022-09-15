@@ -5,57 +5,71 @@
 # 一个静态个人主页
 #--------------------------------------------------------
 
+title: Lete乐特的小窝
+author: Lete乐特
+favicon: /img/favicon.ico
+avatar: /img/avatar.png
+description: 我相信我可以，但我一直在路上，所以我有无限的可能！！
+keywords: Lete乐特,Developer,Programmer,Coder
+about: 人生只有一次，大胆的生活！
+error: 404 Not Found
 
-# language 语言
-language: zh-CN
-author: Lete乐特 # author 名称
-avatar: /img/avatar.png # avatar 头像
-favicon: /img/favicon.ico # favicon 图标
-desc: 我相信我可以，但我一直在路上，所以我有无限的可能！！<br>人生只有一次，大胆的生活，怎么舒服怎么来！！ # 个人描述
-description: 我相信我可以，但我一直在路上，所以我有无限的可能！！ # description 网站描述
-keywords: Lete乐特,Java,JavaWeb,Java常用框架,Spring,SpringBoot,SpringMVC,MyBatis,数据库,MySQL,C#,.NET,开发工具,Git,GitHub,Gitee,(My)Eclipse,IDEA, Hexo,Linux,Maven,前端基础知识,HTML,CSS,JavaScript,jQuery,Ajax,Bootstrap,工具&#x2F;资源,教程,分享,推荐,娱乐,摄影,C#,CMD,Developer,Programmer,Coder #关键字
+social:
+  <img src="/svg/blog.svg" alt="blog"/>: https://blog.imlete.cn
+  <img src="/svg/mail.svg" alt="mail"/>: mailto:i@lete114.top
+  <img src="/svg/github.svg" alt="github/lete114"/>: https://github.com/Lete114
+  <img src="/svg/link.svg" alt="link"/>: https://blog.imlete.cn/link
 
-since: 2019 # 开启主页年份
+main:
+  - h2: Hi there, I'm Lete
+    content: |
+      为什么我叫 <strong>Lete乐特</strong> ？因为我小时候叫 <strong>乐特</strong>，后来改了名字，我依旧很喜欢 <strong>Lete乐特</strong> 这个名字
 
-# 图标大小
-font_size: 1.6em
-# Icon 图标
-links:
-  iconfont icon-youxiang: mailto:lete@lete114.top
-  iconfont icon-github3: https://github.com/lete114
-  iconfont icon-icon_doc_fill: https://blog.lete114.top
-  iconfont icon-lianjie: https://blog.lete114.top/link/
-  iconfont icon-csdn: https://me.csdn.net/Lott0419
-  iconfont icon-zhihu: https://www.zhihu.com/people/lete114
+  - h2: 我的编程之旅
+    content: |
+      我是一名WEB前端开发者，在我小学的时候，因为一款游戏 <a href="https://www.minecraft.net" target="_blank">Minecraft</a>
+      ，当时只能用手机玩，为了让游戏更有趣，很多人都和我一样使用了 <a href="https://github.com/zhuowei/MCPELauncher" target="_blank">Minecraft PE Block Launcher</a>
+      来添加更多玩法，当时有插件(.apk)、脚本(.js)、模组(.mod，不过貌似在PE版本0.8.1过后这一项技术就失传了)
+      ，从那时起我就开始接触 JavaScript，<strong>我便开始了我的编程之旅</strong>，后来接触了PC版的 1.7.10 版本我开始使用别人制作的mod
+      ，因为mod需要通过<a href="https://github.com/MinecraftForge/MinecraftForge" target="_blank">Minecraft Forge</a>
+      加载所以学习了 Java
+      再后来我发现我并不是学 Java 的料，于是就开始自学前端
 
-
-# 自定义页脚字体颜色
-footer_color: '#000 '
-footer_a_color: '#000'
-
-# 鼠标移动到超链接上显示的颜色
-a_hover: '#e58a8a'
-# 自定义名称颜色
-author_color: '#80bdab'
-#自定义描述字体颜色
-desc_color: '#000'
-
-# 自定义背景
-# bg_img: url(https://www.imlete.cn/img/bg.jpg)
-# bg_img: '#fff'
-# bg_img: 'white'
-bg_img: url(https://www.imlete.cn/img/bg.jpg)
-
-
-
+  - h2: 项目
+    content: |
+      <ul>
+        <li>
+          <p><a href="https://github.com/discussjs/discuss" target="_blank">Discuss</a>: 一款简单，安全，免费的自托管评论系统</p>
+        </li>
+        <li>
+          <p><a href="https://github.com/Lete114/Hexo-Theme-MengD" target="_blank">Hexo-Theme-MengD</a>: 一款简洁的 Hexo 主题</p>
+        </li>
+        <li>
+          <p><a href="https://github.com/Lete114/AWStats" target="_blank">AWStats</a>: 一个基于 NodeJS 的一个静态生成器</p>
+        </li>
+        <li>
+          <p><a href="https://github.com/Lete114/CardLink" target="_blank">CardLink</a>: 一个将页面上的超链接转换为卡片式链接的库</p>
+        </li>
+        <li>
+          <p><a href="https://github.com/Lete114/prefetch-page" target="_blank">prefetch-page</a>: 一个浏览器在空闲时预加载可见区域的超链接，以加速后续页面的加载速度，对于速度慢的网站很有帮助</p>
+        </li>
+        <li>
+          <p><a href="https://github.com/Lete114/msg-alert" target="_blank">msg-alert</a>: 一个原生 JS 实现的高仿 Element-ui 的 Message 组件</p>
+        </li>
+        <li>
+          <p><a href="https://github.com/Lete114/WebStack-Screenshot" target="_blank">WebStack-Screenshot</a>: 网站截图 API</p>
+        </li>
+        <li>
+          <p><a href="https://github.com/Lete114?tab=repositories" target="_blank">Github/Lete114</a>: 想了解我更多的开源项目可以访问我的 GitHub</p>
+        </li>
+      </ul>
 
 # 自定义引入外部css、js
 import:
   head: # 引入到</head>之前
     -
   top: # 引入到<body>之后
-    - <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
-    - <style>.icon-icon_doc_fill{color:#e58a8a;}</style>
+    -
   bottom: # 引入到</body>之前
     -
   # 例如：
@@ -63,26 +77,12 @@ import:
   # - '<style>body{color: red}</style>' ## 注意由于css的‘{}’是关键符号所以需要(单/双)引号''
   # - <script>alert(1)</script>
 
-
-## 404页面
-error_404:
-  background: '#00c4b6'
-
-# ICP备案
-ICP:
-  enable: false
-  icon: img/icp.png
-  url: http://www.beian.miit.gov.cn/
-  text:
-
-# 分析(统计)
-analytics:
-  baidu:  # 百度分析
-  google: # 谷歌分析
-
+# 页脚
+footer:
+  ## 搭建年份
+  since: 2019
+  ## 自定义内容，支持 HTML
+  customText:
 
 CDN:
-  index: /css/index.css
-  iconfont: /css/iconfont.min.css
-
-  pixi: https://cdnjs.cloudflare.com/ajax/libs/pixi.js/2.2.5/pixi.js
+  main_css: /css/main.css

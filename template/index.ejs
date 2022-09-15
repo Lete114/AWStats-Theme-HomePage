@@ -1,101 +1,103 @@
 <!DOCTYPE html>
-<html lang="<%= theme.language %>">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="<%= theme.author %>">
-    <meta name="description" content="<%= theme.description %>">
-    <meta name="keywords" content="<%-theme.keywords%>">
-    <title><%= theme.author %> | <%= theme.description %></title>
-    <link rel="icon" href="<%= theme.favicon %>">
-    <link rel="stylesheet" href="<%-theme.CDN.index%>">
-    <link rel="stylesheet" href="<%-theme.CDN.iconfont%>">
-    <style>
-        :root{
-            --font_size: <%-theme.font_size%>;
-            --a_hover: <%-theme.a_hover%>;
-            --author_color: <%-theme.author_color%>;
-            --desc_color: <%-theme.desc_color%>;
-            --footer_color: <%-theme.footer_color%>;
-            --footer_a_color: <%-theme.footer_a_color%>;
-            --bg_img: <%-theme.bg_img%>;
-        }
-    </style>
-    <%if(theme.analytics.baidu!=null){%>
-        <!-- 百度统计 -->
-        <script>
-            var _hmt = _hmt || [];
-            (function () {
-                var hm = document.createElement("script");
-                hm.src = "https://hm.baidu.com/hm.js?<%-theme.analytics.baidu%>";
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(hm, s);
-            })();
-        </script>
-        <%}%>
-        <%if(theme.analytics.google!=null){%>
-        <!-- 谷歌统计 -->
-        <script>
-            const script = document.createElement('script')
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=<%-theme.analytics.google%>'
-            script.async = true
-            document.head.appendChild(script)
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', '<%-theme.analytics.google%>');
-        </script>
-    <%}%>
-    <% theme.import.head.forEach(function(head, i){ %> 
-        <%-head%>
-    <% }) %>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <title><%= theme.title %></title>
+  <meta name="author" content="<%= theme.author %>">
+  <meta name="copyright" content="<%= theme.author %>">
+  <link rel="shortcut icon" href="<%= theme.favicon %>">
+  <meta name="keywords" content="<%= theme.keywords %>">
+  <meta name="description" content="<%= theme.description %>">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<%= theme.title %>">
+  <meta property="og:site_name" content="<%= theme.title %>">
+  <meta property="og:description" content="<%= theme.description %>">
+  <meta property="og:image" content="<%= theme.avatar %>">
+  <meta property="article:author" content="<%= theme.author %>">
+  <meta property="article:tag" content="<%= theme.keywords %>">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="<%= theme.avatar %>">
+  <link href="<%= theme.CDN.main_css %>" rel="stylesheet">
+  <% theme.import.head.forEach(function(head, i){ %>
+  <%-head%>
+  <% }) %>
 </head>
+
 <body>
-    <% theme.import.top.forEach(function(top, i){ %> 
-        <%-top%>
-    <% }) %>
-<div class="wrapper">
-    <div class="main">
-        <div class="container">
-            <div class="intro">
-                <div class="avatar">
-                    <a href="/"><img src="<%- theme.avatar%>" alt="<%= theme.author %>"></a>
-                </div>
-                <div class="name"><%= theme.author %></div>
-                <div class="description">
-                        <p><%- theme.desc %></p>
-                </div>
-                <div class="links">
-                    <% for (var i in theme.links){ %>
-                    <a class="link-item" href="<%-theme.links[i] %>" target="_blank" rel="noopener">
-                        <i class="<%=i%>"></i>
-                    </a>
-                    <% } %>
-                </div>
-            </div>
-        </div>
+  <% theme.import.top.forEach(function(top, i){ %>
+  <%-top%>
+  <% }) %>
+
+  <header id="header">
+    <div class="header-author">
+      <a href="/" class="author">
+        <img class="author-avatar" src="<%= theme.avatar %>" alt="<%= theme.author %>">
+        <div class="author-name"><%= theme.author %></div>
+      </a>
     </div>
-    <footer id="footer" class="footer">
-        <div class="copyright">
-            <%if(theme.ICP.enable == true){%>
-                <a id="icp" href="<%-theme.ICP.url%>" target="_blank" rel="noopener" one-link-mark="yes">
-                    <img style="padding: 0 4px;vertical-align: text-bottom;" src="<%-theme.ICP.icon%>" alt="ICP"/><%-theme.ICP.text%></a><br/>
-            <%}%>
-            <% var now=new Date().getFullYear(); %>
-            <span>Copyright © <span><%- theme.since===now ? theme.since : (theme.since + " - " + now) %></span>
-                    <a href="/" one-link-mark="yes"><%= theme.author %>
-                    </a> All Rights Reserved.
-            </span>
-        </div>
-    </footer>
-</div>
-<script>
-    console.log('\n' + ' %c AWStats-HomePage %c https://github.com/lete114/HomePage ' + '\n', 'color: <%-theme.author_color %>; background: #333; padding:5px 0;', 'background: <%-theme.author_color %>; padding:5px 0;');
-</script>
-<% theme.import.bottom.forEach(function(bottom, i){ %>
+    <div class="header-about">
+      <p><%= theme.about %></p>
+      <div class="header-icon">
+        <% for (social in theme.social) { %>
+        <a href="<%= theme.social[social] %>"><%- social %></i></a>
+        <% } %>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+
+    <% for (main of theme.main) { %>
+    <%
+        const arrayH = ['h1','h2','h3','h4','h5','h6']
+    %>
+    <%Object.keys(main).forEach((item)=>{%>
+    <% if(arrayH.includes(item)&&main[item]){ %>
+    <<%= item %> id="<%= main[item] %>" class="h"><%= main[item] %></<%= item %>>
+    <%}%>
+    <% }) %>
+
+    <p>
+      <%- main.content %>
+    </p>
+
+    <% } %>
+  </main>
+  <% 
+    var now = new Date().getFullYear(); // 年限
+    var since = theme.footer.since === now ? theme.footer.since : (theme.footer.since + " - " + now)
+    var customText = theme.footer.customText
+  %>
+
+  <footer class="footer" id="footer">
+    <div class="copyright">
+      &copy; <%= since %>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M352.57 128c-28.09 0-54.09 4.52-77.06 12.86l12.41-123.11C289 7.31 279.81-1.18 269.33.13 189.63 10.13 128 77.64 128 159.43c0 28.09 4.52 54.09 12.86 77.06L17.75 224.08C7.31 223-1.18 232.19.13 242.67c10 79.7 77.51 141.33 159.3 141.33 28.09 0 54.09-4.52 77.06-12.86l-12.41 123.11c-1.05 10.43 8.11 18.93 18.59 17.62 79.7-10 141.33-77.51 141.33-159.3 0-28.09-4.52-54.09-12.86-77.06l123.11 12.41c10.44 1.05 18.93-8.11 17.62-18.59-10-79.7-77.51-141.33-159.3-141.33zM256 288a32 32 0 1 1 32-32 32 32 0 0 1-32 32z" />
+      </svg>
+      <%= theme.author %>
+    </div>
+    <div class="framework-info">
+      <span>框架</span>
+      <a href="https://github.com/lete114/AWStats" target="_blank">AWStats</a>
+      <span class="footer-separator">|</span>
+      <span>主题</span>
+      <a href="https://github.com/Lete114/AWStats-Theme-HomePage" target="_blank">HomePage</a>
+    </div>
+    <%if(customText){%>
+    <div class="custom-text"><%- customText %></div>
+    <%}%>
+  </footer>
+  </div>
+  <script>
+    console.log('\n %c AWStats-HomePage %c https://github.com/Lete114/AWStats-Theme-HomePage \n', 'color:#80bdab;background:#333;padding:5px 0;', 'background:#80bdab;padding:5px 0;');
+  </script>
+  <% theme.import.bottom.forEach(function(bottom, i){ %>
     <%-bottom%>
-<% }) %>
+  <% }) %>
 </body>
+
 </html>
