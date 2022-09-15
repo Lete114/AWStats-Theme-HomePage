@@ -1,0 +1,24 @@
+#--------------------------------------------------------
+# Awstats
+# 项目地址：https://github.com/lete114/Awstats
+# 一个简单的静态静态生成器
+#--------------------------------------------------------
+
+theme: HomePage ## 主题名称
+public: public ## 渲染后输出的路径
+port: 4000
+
+# 压缩
+minify: 
+  log: true # 是否打印日志
+  html: true
+  css: true
+  js: true
+
+# 部署
+deploy:
+  repoURL: https://github.com/lete114/Home.git # 部署的仓库
+  remote: origin 
+  branch: home # 分支
+  force: false # 是否开启强制提交
+  commitMsg: # 提交的信息，默认：系统当前时间
