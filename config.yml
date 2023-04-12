@@ -27,42 +27,12 @@ main:
 
   - h2: 我的编程之旅
     content: |
-      我是一名WEB前端开发者，在我小学的时候，因为一款游戏 <a href="https://www.minecraft.net" target="_blank">Minecraft</a>
-      ，当时只能用手机玩，为了让游戏更有趣，很多人都和我一样使用了 <a href="https://github.com/zhuowei/MCPELauncher" target="_blank">Minecraft PE Block Launcher</a>
+      我是一名 WEB 前端开发者，在我小学的时候，因为一款游戏 <a href="https://www.minecraft.net" target="_blank">Minecraft</a>
+      ，当时只能用手机玩，为了让游戏更有趣，很多人都和我一样，使用了 <a href="https://github.com/zhuowei/MCPELauncher" target="_blank">Minecraft PE Block Launcher</a>
       来添加更多玩法，当时有插件(.apk)、脚本(.js)、模组(.mod，不过貌似在PE版本0.8.1过后这一项技术就失传了)
-      ，从那时起我就开始接触 JavaScript，<strong>我便开始了我的编程之旅</strong>，后来接触了PC版的 1.7.10 版本我开始使用别人制作的mod
-      ，因为mod需要通过<a href="https://github.com/MinecraftForge/MinecraftForge" target="_blank">Minecraft Forge</a>
-      加载所以学习了 Java
-      再后来我发现我并不是学 Java 的料，于是就开始自学前端
-
-  - h2: 项目
-    content: |
-      <ul>
-        <li>
-          <p><a href="https://github.com/discussjs/discuss" target="_blank">Discuss</a>: 一款简单，安全，免费的自托管评论系统</p>
-        </li>
-        <li>
-          <p><a href="https://github.com/Lete114/Hexo-Theme-MengD" target="_blank">Hexo-Theme-MengD</a>: 一款简洁的 Hexo 主题</p>
-        </li>
-        <li>
-          <p><a href="https://github.com/Lete114/AWStats" target="_blank">AWStats</a>: 一个基于 NodeJS 的一个静态生成器</p>
-        </li>
-        <li>
-          <p><a href="https://github.com/Lete114/CardLink" target="_blank">CardLink</a>: 一个将页面上的超链接转换为卡片式链接的库</p>
-        </li>
-        <li>
-          <p><a href="https://github.com/Lete114/prefetch-page" target="_blank">prefetch-page</a>: 一个浏览器在空闲时预加载可见区域的超链接，以加速后续页面的加载速度，对于速度慢的网站很有帮助</p>
-        </li>
-        <li>
-          <p><a href="https://github.com/Lete114/msg-alert" target="_blank">msg-alert</a>: 一个原生 JS 实现的高仿 Element-ui 的 Message 组件</p>
-        </li>
-        <li>
-          <p><a href="https://github.com/Lete114/WebStack-Screenshot" target="_blank">WebStack-Screenshot</a>: 网站截图 API</p>
-        </li>
-        <li>
-          <p><a href="https://github.com/Lete114?tab=repositories" target="_blank">Github/Lete114</a>: 想了解我更多的开源项目可以访问我的 GitHub</p>
-        </li>
-      </ul>
+      ，从那时起我就开始接触 JavaScript，<strong>我便开始了我的编程之旅</strong>，后来接触了PC版的 1.7.10 版本我开始使用别人制作的 mod 
+      ，因为 mod 需要通过 <a href="https://github.com/MinecraftForge/MinecraftForge" target="_blank">Minecraft Forge</a>
+      加载，所以学习了 Java 再后来我发现我并不是学 Java 的料，于是就开始自学前端
 
 # 自定义引入外部css、js
 import:
